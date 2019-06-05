@@ -1,0 +1,17 @@
+.logo-img {
+    max-width: 60px;
+}
+
+.carousel-inner div img {
+    max-height: 800px;
+}
+
+.hug {
+    font-family: 'Sigmar One', cursive, sans-serif;
+    font-size: 27px;
+}
+
+.loopa {
+    display: inline-block;
+    margin-right: 20px;
+}
