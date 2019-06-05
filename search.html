@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search animal</title>
+<!--    ikonki zwierzat-->
+    <script src="https://kit.fontawesome.com/2e186a26fd.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/double-negatives_dribbble_modified.png" title="Przygarnij Zwierza">
+    <!--    googlefonts-->
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <!--    bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--   bootstrap-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="form">
+    <img src="img/double-negatives_dribbble_modified.png" width="80px" height="60px" class="d-inline-block align-top" alt="">
+    <h1 style = "font-family: 'Sigmar One', cursive, sans-serif";>PRZYTUL ZWIERZA lub ZJEDZ JEŻA!</h1>
+    <!-- navbar bootstrap Image and text -->
+</header>
+
+<form class="form1">
+<!--    <input type="text" class="form-search">-->
+    <div class="form-check form-check-inline form-search-radio">
+
+        <input class="form-check-input" type="radio" name="animalRadios"
+               id="Radio1" value="Dog" checked>
+<!--        ikona psa-->
+        <i class="fas fa-dog">&nbsp</i>
+        <label class="form-check-label" for="exampleRadios1">
+                    PSY
+        </label>
+    </div>
+    <div class="form-check form-check-inline form-search-radio">
+        <input class="form-check-input" type="radio" name="animalRadios"
+               id="Radio2" value="Cat">
+<!--        ikonka kota-->
+        <i class="fas fa-cat">&nbsp</i>
+        <label class="form-check-label" for="exampleRadios2">
+            KOTY
+        </label>
+    </div>
+    <div class="form-check form-check-inline form-search-radio">
+        <input class="form-check-input" type="radio" name="animalRadios"
+               id="Radio3" value="Horse">
+        <i class="fas fa-horse">&nbsp</i>
+        <label class="form-check-label" for="exampleRadios3">
+            KONIE
+        </label>
+    </div>
+
+    <div class="form-check form-check-inline form-search-radio">
+        <input class="form-check-input" type="radio" name="animalRadios"
+               id="Radio4" value="Rabbit">
+        <label class="form-check-label" for="exampleRadios3">
+            INNE
+        </label>
+    </div>
+
+    <button type="submit" class="form-search-btn" value="submit">ZNAJDZ ZWIERZA</button>
+</form>
+
+
+
+<div class="gallery"></div>
+
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--wklejone scripty z githuba petfinder do API-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+
+<!--ajax jquery komunikacja z api-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--to plik javascriprtowy-->
+<script src="js/app.js"></script>
+<!--    plugin jquery fancy apps ulepszenie galerii -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+</body>
+</html>
