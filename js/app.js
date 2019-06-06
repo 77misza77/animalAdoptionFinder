@@ -53,15 +53,8 @@ function loadCards (animalType) {
             console.log(response);
             myButton.removeAttr("disabled");
             myButton.removeClass("loading");
-            //iteracja tablicy probnie
-            // response.data.animals.forEach(
-            //     animal => {
-            //         console.log(animal.name);
-            //         console.log(animal.photos);
-            //         console.log(animal.type);
-            //         console.log(animal.description);
-            //     });
         })
+
         .catch(function (error) {
             // Handle the error
             myButton.removeAttr("disabled");
@@ -89,34 +82,35 @@ console.log(response.data.animals.length);
                     // console.log(elementIn.photos[0])
                     var element = `
 <!--         bootstrapowy card-->
-                <div class="card gallery-element">
-                <a data-fancybox="gallery" href="${elementIn.photos[0].full}" class="gallery-element">
-                <img src="${elementIn.photos[0].full}" class="card-img-top" alt="animal+for+adoption">
-                     <div class="card-body">
-                     <h4 class="card-title">${elementIn.name}</h4>
-                </a>
-                       
-                       <h5 class="card-title">${elementIn.gender}</h5>
-                       <h6 class="card-title">${elementIn.age}</h6>
-                        <p class="card-text">${elementIn.description}</p>
-                        <a href="#" class="btn btn-success">ADOPTUJ</a>
-                        </div>
+               <div class="card gallery-element">
+                 <a data-fancybox="images" href="${elementIn.photos[0].full}" data-caption="${elementIn.name}">
+                    <img src="${elementIn.photos[0].medium}" class="card-img-top" alt="animal+for+adoption"/>
+                 </a>
+                 <a class="card-body">
+                 <h4 class="card-title">${elementIn.name}</h4>
+                   <h5 class="card-title">${elementIn.gender}, ${elementIn.age}</h5>
+  
+                    <p class="card-text">${elementIn.description}</p>
+                    <a href="details.html?id=${elementIn.id}" class="btn btn-info">GALERIA ZDJĘĆ</a>
+                    
+                     
+                    <a href="adoption_form.html" class="btn btn-success">ADOPTUJ MNIE!</a>
+                   
+                </div>
+                 
                 </div>
             `;
                     myDivGallery.append(element);
                 }
-
-
             }
         );
-
     }
+
     //druga czesc warunku jesli tablica jest pusta
     else {
         var element1 =  `<div>
-                            <h1>Niestety nie mamy innych zwierząt do adopcji.</h1>
-                            <h1>Wybierz innego zwierza!</h1>
-                            <img src="img/funny_dog.jpg" class="card-img-top" alt="funny_dog">
+                            <h1>Niestety nie mamy takiego zwierzaka. Wybierz innego!</h1>
+                            <img src="img/funny_dog.jpg" class="my-height" alt="funny_dog">
 <!--                            width="60px" height="60px"-->
                          </div>`;
         myDivGallery.append(element1);
