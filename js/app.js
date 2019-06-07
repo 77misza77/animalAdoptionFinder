@@ -25,15 +25,17 @@ $(document).ready(function () {
         // console.log($("#Radio1").is(':checked'));
         if ($("#Radio1").is(':checked')) {
             radioAnimalType = "Dog"
+            // myDivGallery.css("background-image", "url(../img/wallpaper.png)");
         }
         else if ($("#Radio2").is(':checked')) {
-            radioAnimalType = "Cat"
+            radioAnimalType = "Cat";
+            // myDivGallery.css("background-image", "url(../img/wallpaper1.png)");
         }
         else if ($("#Radio3").is(':checked')) {
             radioAnimalType = "Horse"
         }
         else {
-            radioAnimalType = "Cow"
+            radioAnimalType = "Rabbit"
         }
 
         // wywolanie funkcji
@@ -80,6 +82,7 @@ console.log(response.data.animals.length);
             //robimy warunek dotyczacy ilosci zdjec
                 if (!(elementIn.photos.length === 0)) {
                     // console.log(elementIn.photos[0])
+
                     var element = `
 <!--         bootstrapowy card-->
                <div class="card gallery-element">
@@ -95,11 +98,9 @@ console.log(response.data.animals.length);
                     
                      
                     <a href="adoption_form.html" class="btn btn-success">ADOPTUJ MNIE!</a>
-                   
-                </div>
-                 
-                </div>
+                </div> 
             `;
+
                     myDivGallery.append(element);
                 }
             }
